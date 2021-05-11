@@ -2,6 +2,8 @@
 
 Websocket Server broadcasting simple hypixel events e.g. death/kill/win/loss in a gamemode or on the network (for a specific player)
 
+This only sends Events once a game ended!
+
 ## Installation
 
 Run ```npm i ws``` and ```npm i node-fetch``` to install the required packages.

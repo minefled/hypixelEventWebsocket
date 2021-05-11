@@ -79,6 +79,8 @@ function read() {
 
             if(xp_delta > 0) {postEvent({"event_name": "xp_gain","value":network_data.xp,"delta":xp_delta});}
             if(karma_delta > 0) {postEvent({"event_name": "karma_gain","value":network_data.karma,"delta":karma_delta});}
+
+            old_network_data = network_data;
     });
 }
 
