@@ -1,0 +1,7 @@
+{
+    "API_KEY": "YOUR API KEY",
+    "player_uuid": "e6e67827-bde4-4951-ad95-88da28b4afc9",
+    "reads_per_second": 0.5,
+    "log_events": true,
+    "port": 5064
+}
