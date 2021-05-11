@@ -16,7 +16,6 @@ Then just run ```node index.js``` and the server will be running.
 - [x] Skywars 
 - [x] Pit
 - [x] Duels
-More coming soon...
 
 ## Protocol
 Documentation coming soon...

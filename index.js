@@ -19,6 +19,7 @@ const gamemodes = {
 
 let recent_events = [];
 let old_stats = null;
+let old_network_data = null;
 
 function getApiUri(key, player) {
     return `https://api.hypixel.net/player?key=${key}&uuid=${player}`
@@ -65,6 +66,19 @@ function read() {
             }
 
             old_stats = stats;
+
+            network_data = {
+                "xp": raw_data.networkExp,
+                "karma": raw_data.karma
+            };
+
+            if(old_network_data == null) {old_network_data=network_data;}
+
+            var xp_delta = network_data.xp - old_network_data.xp;
+            var karma_delta = network_data.karma - old_network_data.karma;
+
+            if(xp_delta > 0) {postEvent({"event_name": "xp_gain","value":network_data.xp,"delta":xp_delta});}
+            if(karma_delta > 0) {postEvent({"event_name": "karma_gain","value":network_data.karma,"delta":karma_delta});}
     });
 }
 
