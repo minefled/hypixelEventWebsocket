@@ -67,9 +67,9 @@ function read() {
 
             old_stats = stats;
 
-            network_data = {
-                "xp": raw_data.networkExp,
-                "karma": raw_data.karma
+            var network_data = {
+                "xp": raw_data.player.networkExp,
+                "karma": raw_data.player.karma
             };
 
             if(old_network_data == null) {old_network_data=network_data;}
